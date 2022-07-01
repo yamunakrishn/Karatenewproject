@@ -18,3 +18,10 @@ from django.views.decorators.csrf import csrf_exempt
 
 def homepage(request):
     return render(request,'index.html')
+
+
+def affiliation(request):
+    return render(request, 'affiliation.html')
+
+def member(request):
+    return render(request,'member.html')

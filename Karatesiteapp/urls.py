@@ -7,6 +7,8 @@ from django.contrib.auth import views as auth_views
 from django.contrib import admin
 
 urlpatterns =[  path('',views.homepage,name='homepage'),
+                path('affiliation',views.affiliation,name='affiliation'),
+                path('member',views.member,name='member'),
 
 
 
