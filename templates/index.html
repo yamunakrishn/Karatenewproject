@@ -11,10 +11,20 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  
+  <!-- Favicons -->
+  <link href="{% static 'img/ki.png' %}" rel="icon">
+  <link href="{% static 'img/ki.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="{% static 'css/historline.css' %}" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
@@ -34,6 +44,42 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .video-container {
+      overflow: hidden;
+      position: relative;
+      width:100%;
+      margin-top: 10vh;
+  }
+  
+  .video-container::after {
+      padding-top: 56.25%;
+      display: block;
+      content: '';
+  }
+  
+  .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+  }
+  @media(max-width:992px){
+    .video-container iframe {
+     
+      height: 100%; 
+      background-size:contain;
+      min-height: 400px;
+    
+  }
+  .about .video-box {
+  
+    background-size: contain;
+    min-height: 400px;
+  }
+}
+  </style>
 </head>
 
 <body>
@@ -43,27 +89,26 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        
+        <h1><a href="#"><span><img src="{% static 'img/logo.jpg' %}" alt="" class="img-fluid"></span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="{% url 'member' %}">Associate Members</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#features">Kattas</a></li>
           <li><a class="nav-link scrollto" href="{% url 'affiliation' %}">Affiliation</a></li>
-          <li><a class="nav-link scrollto" href="#team">Kattas</a></li>
-          
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
+      </nav><!-- .navbar -->
 
     </div>
-  </header>
-  <!-- End Header -->
+  </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -72,15 +117,15 @@
       <div class="row justify-content-between">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1>KARATE</h1>
-            <h2>We are team of talented trainers for training good classes.</h2>
+            <h1>Goju Ryu Okinawa Karate Do Association<span></span></h1>
+            <h2>Be Karate The Way Of Life</h2>
             <div class="text-center text-lg-start">
               <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="{% static 'img/glo1.jpg' %}" class="img-fluid animated" alt="" style="border-radius:40%;">
+          <img src="{% static 'img/hero-img1.jpg' %}" class="img-fluid animated" alt="" style="border-radius:40%;">
         </div>
       </div>
     </div>
@@ -110,173 +155,211 @@
 
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a> -->
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
           </div>
 
-          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
-
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 " data-aos="fade-left">
+            <h3>About Us & Our Masters </h3>
+            <p>JKMO INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas.</p>
+            <div class="container">
+              <h2 class="pb-3 pt-3 text-center mb-3 display-5"></h2>
+              <!-- First Content Section-->
+              <div class="row align-items-center connecting-lines d-flex">
+                <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold"><a href="{% url 'kattas' %}"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></a></div>
+                </div>
+                <div class="col-6">
+                  <h4>Funakoshi Gichin</h4>
+                  <p>Founder</p>
+                </div>
+              </div>
+              <!-- Path Line -->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner left-bottom"></div>
+                </div>
+              </div>
+              <!-- Second Content Section-->
+              <div class="row align-items-center justify-content-end connecting-lines d-flex">
+                <div class="col-6 text-right">
+                  <h4>Second Step</h4>
+                  <p>Pellentesque vehicula urna et sollicitudin tempus. </p>
+                </div>
+                <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h2.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></div>
+                </div>
+              </div>
+              <!-- Path Line -->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner right-bottom"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner top-left"></div>
+                </div>
+              </div>
+              <!-- Third Content Section -->
+              <div class="row align-items-center connecting-lines d-flex">
+                <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h4.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></i></div>
+                </div>
+                <div class="col-6">
+                  <h4>Third Step</h4>
+                  <p>Master </p>
+                </div>
+              </div>
             </div>
-
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Dine Pad</a></h4>
-              <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
-            </div>
-
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 
     <!-- ======= Features Section ======= -->
-    <!-- <section id="features" class="features">
+    <section id="features" class="features">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Features</h2>
-          <p>Check The Features</p>
+          <h2>Kata</h2>
+          <p>Our Katas</p>
         </div>
 
         <div class="row" data-aos="fade-left">
           <div class="col-lg-3 col-md-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
-              <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Gekisai dai-ichi </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Gekisai dai-ni </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="">Sed perspiciatis</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Saifa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a href="">Magni Dolores</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Seiyunchin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">Nemo Enim</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Shisochin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="">Eiusmod Tempor</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Sanseru </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
-              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="">Midela Teren</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Sepai </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">Pira Neve</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Kururunfa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="450">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="">Dirada Pack</a></h3>
+              <h3><a href="{% url 'kattas' %}">Sesan	</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
-              <i class="ri-disc-line" style="color: #b20969;"></i>
-              <h3><a href="">Moton Ideal</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Suparunpei </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-              <i class="ri-base-station-line" style="color: #ff5828;"></i>
-              <h3><a href="">Verdo Park</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Sanchin </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="600">
-              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-              <h3><a href="">Flavor Nivelanda</a></h3>
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="{% url 'kattas' %}">Tensho </a></h3>
             </div>
           </div>
+               
         </div>
 
-      </div> -->
-    <!-- </section> -->
-    <!-- End Features Section -->
+      </div>
+    </section><!-- End Features Section -->
 
     <!-- ======= Counts Section ======= -->
-    <!-- <section id="counts" class="counts">
+    <section id="counts" class="counts">
       <div class="container">
 
         <div class="row" data-aos="fade-up">
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <i class="bi bi-person"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Masters</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Instructors</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <i class="bi bi-bezier"></i>
+              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+              <p>BlackBets</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Our Students</p>
             </div>
           </div>
 
         </div>
 
       </div>
-    </section> -->
-    <!-- End Counts Section -->
+    </section><!-- End Counts Section -->
 
     <!-- ======= Details Section 
     <section id="details" class="details">
       <div class="container">
-
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
             <img src="{% static 'img/details-1.png' %}" class="img-fluid" alt="">
@@ -298,7 +381,6 @@
             </p>
           </div>
         </div>
-
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
             <img src="{% static 'img/details-2.png' %}" class="img-fluid" alt="">
@@ -319,7 +401,6 @@
             </p>
           </div>
         </div>
-
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
             <img src="{% static 'img/details-3.png' %}" class="img-fluid" alt="">
@@ -340,7 +421,6 @@
             </p>
           </div>
         </div>
-
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
             <img src="{% static 'img/details-4.png' %}" class="img-fluid" alt="">
@@ -363,7 +443,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </section>End Details Section -->
 
@@ -372,10 +451,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <center>
-          <h2 class="text-dark">Gallery</h2>
+          <h2>Gallery</h2>
           <p>Check our Gallery</p>
-        </center>
         </div>
 
         <div class="row no-gutters" data-aos="fade-left">
@@ -449,90 +526,7 @@
       </div>
     </section><!-- End Gallery Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials">
-      <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div> -->
-            <!-- </div> -->
-            <!-- End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
-            <!-- <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div> -->
-            <!-- End testimonial item -->
-
-          <!-- </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Testimonials Section -->
+    
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
@@ -540,71 +534,47 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Team</h2>
-          <p>Our Great Team</p>
+          <p>Our Great Masters</p>
         </div>
 
         <div class="row" data-aos="fade-left">
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Master</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <h4>Funakoshi Gichin</h4>
+                <span>Founder</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="{% static 'img/team/team-2.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/m2.jpg' %}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
-                <span>Leader</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <span>Chief Master</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/m4.jpg' %}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
-                <span>Instructor</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <span>Master</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{% static 'img/team/team-4.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{% static 'img/team/m3.jpg' %}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
-                <span>Trainer</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <span>Master</span>
               </div>
             </div>
           </div>
@@ -626,46 +596,47 @@
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is needed to join the class? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is Karate ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p>
-                  Set up a time to attend the class.f you decide to join, talk to one of the instructors and they will get you signed up.
+                  karate, (Japanese: “empty hand”) unarmed martial-arts discipline employing kicking, striking, and defensive blocking with arms and legs. Emphasis is on concentrating as much of the body's power as possible at the point and instant of impact.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Do I need to have previous karate or martial arts experience? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">History of Karate <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  ABSOLUTELY NOT! Most of our new students do not have any experience, and that is 100% fine! We will be able to help you along every step of the way to your success!
+                  Karate evolved in East Asia over a period of centuries, becoming systematized in Okinawa in the 17th century, probably by people forbidden to carry weapons. It was imported into Japan in the 1920s. Several schools and systems developed, each favouring somewhat different techniques and training methods.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Which style of karate do you teach? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Founder Of Karate? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  We teach Shinkyokushin karate (New Kyokushin), and our dojo is proud to be recognized by the World Karate Organization.
+                  <b>Funakoshi Gichin</b>
+                  The Father of Modern Karate. Funakoshi Gichin was born on Nov 10, 1868 in Yamakawa, Shuri, Okinawa Prefecture. He was of samurai lineage, from a family which in former times had been vassals of Ryukyu Dynasty nobles.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How often are karate classes? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What does Karate Stand for ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  We hold class Monday through Thursday.  All students are encouraged to attend at least 2 times per week, however they are welcome to come as many times as they want. 
+                  The word karate is a combination of two kanji (Chinese characters): kara, meaning empty, and te, meaning hand; thus, karate means "empty hand." Adding the suffix "-dō" (pronounced "daw"), meaning "the way/path," karate-dō, implies karate as a total way of life that goes well beyond the self-defense applications.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Are you certified? Will my belts be recognized worldwide? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Types Of Karate? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  We are a member of the World Karate Organization – Shinkyokushinkai, and we subscribe to its rigorous standards of quality. You may refer to the organization's website to locate other schools and instructors.
+                  There are over 75 style of Karate, the four prominent among them being Shotokan, Shito-ryu, Wado-ryu, and Goju-ryu. Of these, the first three styles originated in Okinawa's Shuri region while Goju-ryu originated in the Naha province.
                 </p>
               </div>
             </li>
@@ -754,7 +725,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h3>Karate</h3>
-              <p class="pb-3"><em>Providing the best.</em></p>
+              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
               <p>
                 A108 Adam Street <br>
                 NY 535022, USA<br><br>
@@ -786,7 +757,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -806,7 +777,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
-        Designed by <a href="#">WKO</a>
+        Designed by <a href="#">JKMO</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -824,6 +795,7 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/timeline.js' %}"></script>
 
 </body>
 

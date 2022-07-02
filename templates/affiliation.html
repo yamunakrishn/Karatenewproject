@@ -45,6 +45,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
+        <h1><a href="#"><span><img src="{% static 'img/logo.jpg' %}" style="width:55px;height:55px;" alt="" class="img-fluid"></span></a></h1>
         <!--<h1><a href="#"><span><img src="" alt="" class="img-fluid"></span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
          <a href="#"><img src="#" alt="" class="img-fluid"></a>
@@ -54,12 +55,12 @@
         <ul>
           <ul>
             <li><a class="nav-link scrollto" href="{% url 'homepage' %}">Home</a></li>
-            <li><a class="nav-link scrollto" href="{% url 'homepage' %}">About</a></li>
-            <li><a class="nav-link scrollto" href="#{% url 'homepage' %}">Gallery</a></li>
-            <li><a class="nav-link scrollto" href="#">Associate Members</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'homepage' %}#about">About</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'homepage' %}#gallery">Gallery</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'member' %}">Associate Members</a></li>
             <li><a class="nav-link scrollto active" href="{% url 'affiliation' %}">Affiliation</a></li>
-            <li><a class="nav-link scrollto" href="{% url 'homepage' %}">Kattas</a></li>
-            <li><a class="nav-link scrollto" href="{% url 'homepage' %}">Contact</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'kattas' %}">Kattas</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'homepage' %}#contact">Contact</a></li>
           </ul>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -70,21 +71,9 @@
         
   
 
-  <!-- <main id="main"> -->
+  
 
-    <!-- ======= Breadcrumbs Section ======= -->
-    <!-- <section class="box"><br><br>
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Affiliation</h2><br>
-          
-            <button><a href="index.html"><b>Download</b></a></button>
-          
-        </div>
-
-      </div>
-    </section> -->
+      
     <br>
     <br>
     <br>

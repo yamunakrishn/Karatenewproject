@@ -25,3 +25,6 @@ def affiliation(request):
 
 def member(request):
     return render(request,'member.html')
+
+def kattas(request):
+    return render(request,'kattas.html')

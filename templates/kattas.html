@@ -6,16 +6,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-    <title>WKO</title>
+    <title>Karate</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
   
-    <!-- Favicons -->
-    <link href="{% static 'img/ki.png' %}" rel="icon">
-    <link href="{% static 'img/ki.png' %}" rel="apple-touch-icon">
     
-  <!-- history line CSS File -->
-  <link href="{% static 'css/historyline.css' %}" rel="stylesheet">
   
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -47,22 +42,19 @@
       <div class="container d-flex align-items-center justify-content-between">
   
         <div class="logo">
-            <!--<h1><a href="#"><span><img src="" alt="" class="img-fluid"></span></a></h1>-->
+            <h1><a href="#"><span><img src="{% static 'img/logo.jpg' %}" style="width:55px;height:55px;" alt="" class="img-fluid"></span></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
-             <a href="#"><img src="{% static 'img/logo.jpg' %}" alt="" class="img-fluid"></a>
-          </div>
-  <style>
-    
-  </style>
+              </div>
+  
         <nav id="navbar" class="navbar">
           <ul>
             <ul>
-              <li><a class="nav-link scrollto" href="{% url 'homepage' %}">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'homepage' %}#hero">Home</a></li>
               <li><a class="nav-link scrollto" href="{% url 'homepage' %}#about">About</a></li>
-              <li><a class="nav-link scrollto active" href="{% url 'member' %}">Associate Members</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'member' %}">Associate Members</a></li>
               <li><a class="nav-link scrollto" href="{% url 'homepage' %}#gallery">Gallery</a></li>
               <li><a class="nav-link scrollto" href="{% url 'affiliation' %}">Affiliation</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'homepage' %}#features">Kattas</a></li>
+              <li><a class="nav-link scrollto active" href="{% url 'kattas' %}#features">Kattas</a></li>
               <li><a class="nav-link scrollto" href="{% url 'homepage' %}#contact">Contact</a></li>
             </ul>
           </ul>
@@ -72,144 +64,58 @@
       </div>
     </header><!-- End Header -->
   
-    
-      
-      <style>
-        
-        
-        /* Add padding to containers */
-        .container {
-          padding-top: 46px;
-          width:310px;
-          
-        }
-        
-        /* Full-width input fields */
-        input[type=text], input[type=password] {
-          width: 100%;
-          padding: 15px;
-          margin: 5px 0 22px 0;
-          display: inline-block;
-          border: none;
-          background: #f1f1f1;
-        }
-        
-        input[type=text]:focus, input[type=password]:focus {
-          background-color: #ddd;
-          outline: none;
-        }
-        
-        /* Overwrite default styles of hr */
-        hr {
-          border: 1px solid #f1f1f1;
-          margin-bottom: 25px;
-        }
-        
-        /* Set a style for the submit button */
-        .registerbtn {
-          background-color: #04AA6D;
-          color: white;
-          padding: 16px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-          width: 100%;
-          opacity: 0.9;
-        }
-        
-        .registerbtn:hover {
-          opacity: 1;
-        }
-        
-        /* Add a blue text color to links */
-        a {
-          color: dodgerblue;
-        }
-        
-        /* Set a grey background color and center the text of the "sign in" section */
-        .signin {
-          background-color: #f1f1f1;
-          text-align: center;
-        }
-        </style>
-        </head>
-        <body>
-          
-        <form action="/action_page.php">
-          <div class="container">
-            <center>
-            <h1 style="padding-top:50px;">Register</h1>
-          </center>
-            
-            <hr>
-            <fieldset>
-            <label for="email"><b>Name</b></label>
-            <input type="text"  name="email" id="email" required>
-        
-            <label for="psw"><b>Register id:</b></label>
-            <input type="text"  name="psw" id="psw" required>
-        
-            <label for="psw-repeat"><b>Designation</b></label>
-            <input type="text"  name="psw-repeat" id="psw-repeat" required>
-            <hr>
-            
-            <button type="submit" class="registerbtn">Register</button>
+    <main id="main">
+  
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section class="breadcrumbs">
+        <div class="container">
+          <BR>
+  
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>KATA</h2>   
           </div>
-          
-          
-        </form>
-        </fieldset>
+          <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:107px;height:161px;object-fit:cover" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x">
+  
+        </div>
+      </section><!-- End Breadcrumbs Section -->
   
       <section class="inner-page">
-        <div class="container-fluid">
+        <div class="container">
+          <p>Kata is often described as a set sequence of karate moves organized into a pre-arranged fight against imaginary opponents. The kata consists of kicks, punches, sweeps, strikes, blocks, and throws. Body movement in various kata includes stepping, twisting, turning, dropping to the ground, and jumping. In Shotokan, kata is not a performance or a demonstration, but is for individual karateka to practice full techniques—with every technique potentially a killing blow; while paying particular attention to form and timing (rhythm).
+            Shotokan Karate is comprised of 26 katas, each with their own emphasis on fast and slow or controlled and powerfull movements. Virtually all of the katas taught today in the Shotokan system have two kiai points.
+            The kiai or "spirit cry" as it is sometimes referred to, occurs only at certain pre-determined moments in each kata. It is precisely at these pre-determined moments that the karate-ka is required to demonstrate a total commitment of body, mind, and spirit, and to channel all of their available energy and apply it appropriately to the required technique. The kiai is a common thread that runs through all major styles of karate.
+          </p>
+          <hr>
+        </div>
+      </section>
+      
+      <section class="inner-page">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>KATA NAME</h2>   
+          </div>
+          <br>
+          <p>Kata is often described as a set sequence of karate moves organized into a pre-arranged fight against imaginary opponents. The kata consists of kicks, punches, sweeps, strikes, blocks, and throws. Body movement in various kata includes stepping, twisting, turning, dropping to the ground, and jumping. In Shotokan, kata is not a performance or a demonstration, but is for individual karateka to practice full techniques—with every technique potentially a killing blow; while paying particular attention to form and timing (rhythm).
+            Shotokan Karate is comprised of 26 katas, each with their own emphasis on fast and slow or controlled and powerfull movements. Virtually all of the katas taught today in the Shotokan system have two kiai points.
+            The kiai or "spirit cry" as it is sometimes referred to, occurs only at certain pre-determined moments in each kata. It is precisely at these pre-determined moments that the karate-ka is required to demonstrate a total commitment of body, mind, and spirit, and to channel all of their available energy and apply it appropriately to the required technique. The kiai is a common thread that runs through all major styles of karate.
+          </p><br>
           <div class="row">
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt=""style="border-radius:50%; width:20vh; height:20vh;"></div>
-                <div class="member-info">
-                  <h4>Anand</h4>
-                  <span>Position:Founder</span>
-                </div>
+            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt=""style="border-radius:50%; width:20vh; height:20vh;"></div>
-                <div class="member-info">
-                  <h4>Ajaa</h4>
-                  <span>Position:Master</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt=""style="border-radius:50%; width:20vh; height:20vh;"></div>
-                <div class="member-info">
-                  <h4>CFVG</h4>
-                  <span>Position:Master</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-              <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt=""style="border-radius:50%; width:20vh; height:20vh;"></div>
-                <div class="member-info">
-                  <h4> Jon</h4>
-                  <span>Position:Master</span>
-                </div>
-              </div>
-            </div>
-              
           </div>
         </div>
       </section>
+      
   
     </main><!-- End #main -->
   
     <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
@@ -247,7 +153,8 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-             <form action="" method="post">
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
@@ -266,7 +173,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
-        Designed by <a href="#">WKO</a>
+        Designed by <a href="#">JKMO</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -285,7 +192,6 @@
   
     <!-- Template Main JS File -->
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/timeline.js' %}"></script>
   
   </body>
   
